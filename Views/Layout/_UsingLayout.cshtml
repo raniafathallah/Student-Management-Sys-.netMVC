@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_UsingLayout</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <style>        
+        h1 {
+            text-align: center;
+            text-transform: capitalize;
+        }
+    </style>
+    <div class="container-fluid" style="background-color:#16b7b7;color:#fff;height:100px;">
+        <h1>  student management system</h1>
+    </div>
+    @RenderBody()
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

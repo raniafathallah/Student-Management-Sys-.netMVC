@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_UsingLayout.cshtml";
+}
+<style>
+   .btnn {background-color:#0f8c8c !important;color:#fff;    float: right;
+    margin: 5px;}
+</style>
+<h2>  </h2>
+<div>
+    @Html.ActionLink("CreateClassRoom", "InsertTblClassRoom", null, new { htmlattribute = "" }, new { @class = "btn btnn" })
+    @Html.ActionLink("See All Student ", "showalltableStudent", null, new { htmlattribute = "" }, new { @class = "btn  btnn" })
+
+    @Html.Action("printTblClassRoom")
+
+</div>

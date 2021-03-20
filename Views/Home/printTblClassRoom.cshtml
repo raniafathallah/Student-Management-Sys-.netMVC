@@ -1,0 +1,55 @@
+﻿@model IEnumerable<StudentManagementSys.Models.tblclassroom>
+
+@{
+    ViewBag.Title = "printTblClassRoom";
+    Layout = null;
+}
+
+<style>
+    .btn.focus, .btn:focus, .btn:hover{color:#fff;}
+</style>
+@*<h2>printTblClassRoom</h2>*@
+<h2>Class Room List</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table container">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.idcr)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.idcr)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.createDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "editclassroom", new { id = item.idcr }) |
+                @Html.ActionLink("Details", "detailsClassRoom", new { id = item.idcr }) |
+                @Html.ActionLink("Delete", "DeleteTblClassRoom", new { id = item.idcr })|
+                @Html.ActionLink("Add student ", "AddTblStudent", new { id = item.idcr })|
+                @Html.ActionLink("See student ", "listTblStudents", new { id = item.idcr })
+
+            </td>
+        </tr>
+
+    }
+
+</table>
